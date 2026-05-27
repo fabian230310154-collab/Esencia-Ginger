@@ -1,0 +1,213 @@
+* {
+  box-sizing: border-box; /*La box-sizingpropiedad CSS nos permite incluir el relleno y el borde en el ancho y alto total de un elemento*/
+}
+
+#contenedor{
+        border:5px solid green;   /* Borde que indica los limites del todo el contenedor*/
+}
+
+body{
+	      background-image: url("img/FONDOJENGIBRE.jpg"); /* Imagen de fondo para el cuerpo del documento html*/
+         /*background-size: cover;*/
+		 /*background-position: center;*/
+		 /*background-repeat: no-repeat;*/
+}
+
+#cabecera {  /*estilos a la cabecera del documento utilizando el id definido en el div correspondiente a esta sección*/
+        background-color:hsl(23.855, 33.878%, 48.039%, 0.8) ; /* color de fondo de la cabecera, de colores con transparencias que pueden variar según 
+		se requiera, Los valores de color HSLA son una extensión de los valores de color HSL con un canal alfa, que especifica la opacidad del color.
+		MATIZ SATURACIÓN Y LUMINOSIDAD */
+		padding:30px;
+	    text-align:center;	
+	}
+	
+	
+.izquierdo {
+	
+   float:left; /* Propiedad flotante css, especifica cómo debe flotar un elemento*/
+    width:20%; /*Ancho sección menu*/
+    text-align:center; /*Alineación del text*/
+    padding:0 20px; /* Relleno */
+	background-color:hsl(31.364, 66%, 60.784%,0.8); /*color morado con opacidad hsla*/
+	height:100%; /*Altura */
+	margin-top:7px; /*propiedad que establece el margen superior de un elemento especificando una longitud o un porcentaje*/
+	 	 
+}
+form{
+	width: 300px;
+	padding:30px;
+	background-color:black;
+	
+}
+input{
+	width:100%;
+	padding:10px;
+	margin-top:10px;
+}
+button{
+	width:100%;
+	padding:10px;
+	margin-top:10px;
+}
+	 
+   .cuerpo { /* estilos al contenido central de la página*/
+	 height:auto; /* altura */
+	 margin-top:7px; /*Margen superior*/
+	 float:left; /* permite al elemento main flotar en una posicion*/
+	 width:60%; /* anchura del elemento */
+	 padding:0 20px; /* relleno */
+	 background-color:hsl(86.667, 60%, 85.294%,0.9); /* Color con trasnparencias/opacidad*/
+
+
+
+}
+
+	.derecho {
+	  background-color:hsl(31.364, 66%, 60.784%,0.8); /* Color con trasnparencias/opacidad*/
+	  float:left; /* permite al elemento flotar en una posicion*/
+	  width:20%; /* anchura del elemento */
+	  height: 100%;/* altura */
+	  padding:15px; /* relleno */
+	  margin-top:7px; /*Margen superior*/
+	  text-align:center; /*Alineacion de texto al centro*/
+}
+
+
+	.pie{ /* pie de página */
+    background-color:hsl(41.772, 72.477%, 78.627%, 0.7); 
+	text-align:center;
+	padding:10px;
+	margin-top:7px;
+	}
+
+	@media only screen and (max-width:620px) { /*consulta de medios especificando aplicar condiciones a la pantalla , en este caso 
+	un ancho máximo de 620px para adaptarse y no se distorsionen los elementos que hay en ella*/
+	  .derecho, .cuerpo, .izquierdo,iframe{   /* se consideran los divs que hacen la función para maquetar nuestra página, utilizando las clases .menu, .main, .right 
+	  que seran ordenados y adaptados a la pantalla */
+		width:100%;
+	  }
+	}
+
+#alinear{
+display: flex;
+}
+
+#scrolll {
+	overflow:auto;   /*´propiedad css especifica: si recortar contenido, dibujar barras de desplazamiento o mostrar el 
+	contenido excedente en un elemento a nivel de bloque.Depende del agente de usuario. Navegadores de escritorio como Firefox proveen barras de 
+	desplazamiento si hay contenido excedente. */
+ }
+
+
+table, th, td {  /* estilo a la tabla creada en la pagina galeria.html*/
+  border: 2px solid yellow; /*Bordes  con un grosor de 7px, con un color solido azul*/
+  
+}
+
+.img {
+        width:325px; 
+		height:250px;
+}
+
+img, video, iframe{
+  		max-width: 100%;
+  		display: block;
+  		margin: 0 auto;
+  		max-height: 100%;
+		
+  	}
+
+.copyright {
+        width:10px; 
+		height:10px;
+   		display: inline-block
+}
+
+.redes {
+        width:20px; 
+		height:20px;
+		display: inline-block;
+}
+
+	p{
+		font-family:Arial;
+		font-size: 16px;
+		color: green;
+	}
+	
+	 #imglogo{ /* logo */
+		max-width:18%; /*propiedad, define el ancho máximo que un elemento puede tener*/
+		width:auto; /* propiedad width css establece el ancho de un elemento. Auto - Valor por defecto. El navegador calcula el ancho*/
+		height:auto; /* propiedad height css establece la altura de un elemento*/
+		float:left;  /* Mantiene la imagen flotando a la izquierda*/
+	}
+	
+.izquierdo a {
+   display: inline-block;
+   padding: 10px 40px;
+   color: #7F2020;
+   text-decoration: none;
+   border-radius: 10px;
+   transition: all 10 s ease;
+      box-shadow: 0 0 10px #7F2020, 0 0 20px #7F2020;
+
+}
+
+.izquierdo a:hover {
+   background: linear-gradient(135deg, hsl(33.273, 100%, 56.863%), hsl(0, 59.748%, 31.176%));
+   color: #FFD65A;
+   box-shadow: 0 0 10px #FFD65A, 0 0 20px #FFD65A;
+   text-shadow: 0 0 8px rgba(255,255,255,0.7);
+   transform: translateX(6px) scale(1.05);
+   font-size: 20px;
+}
+.img:hover{
+	 filter: grayscale(0%) opacity(100%) drop-shadow(0 0 5px #FFD65A);
+    transform: scale(1.1);
+}
+
+.redes:hover{
+	 filter: grayscale(0%) opacity(100%) drop-shadow(0 0 5px #7F2020);
+    transform: scale(1.6);
+}
+
+ #imglogo:hover{
+	 filter: grayscale(0%) opacity(100%) drop-shadow(0 0 5px #7F2020);
+    transform: scale(1.2);
+}
+
+
+ iframe:hover{
+	 filter: grayscale(0%) opacity(100%) drop-shadow(0 0 5px #FFD65A);
+}
+
+ video:hover{
+	 filter: grayscale(0%) opacity(100%) drop-shadow(0 0 5px #FFD65A);
+    transform: scale(1.2);
+}
+
+
+h1 {
+  font-family: 'Nunito', sans-serif;
+text-align:center;
+}
+h2,h3,h4,h5,h6 {
+  font-family: 'Nunito', sans-serif;
+text-align:left;
+}
+
+
+.mensaje {
+   animation: fade 3s infinite;
+}
+
+@keyframes fade {
+   0%, 100% { opacity: 0; }
+   50% { opacity: 1; }
+}
+
+
+
+
+
+
